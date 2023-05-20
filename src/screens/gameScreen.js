@@ -43,9 +43,8 @@ function GameScreen({ route }) {
         
             <Text style = {styles.PlayerName}>{player}</Text>
             <View style ={styles.questionContainer}>
-                <FontAwesome5 name="skull-crossbones" size={30} color="black" />
                 <Text style={styles.QuestionText} >{question}</Text>
-                <MaterialIcons name="double-arrow" size={30} color="black" onPress={()=>{onNextQuestion()}} />
+                <MaterialIcons name="double-arrow" size={30} color="#00796B" onPress={()=>{onNextQuestion()}} />
             </View>  
         </View>
         

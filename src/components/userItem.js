@@ -9,7 +9,7 @@ const UserItem = (props)=>{
             <Text style = {{height: 30,fontSize:23,color:"#00796B",textAlign:"center",textAlignVertical:"center",margin:3}}>
                 {props.item.name}
             </Text>
-            <Entypo name="circle-with-cross" size={24} color="black" onPress={()=>{props.removePlayer(props.item)}}/>          
+            <Entypo name="circle-with-cross" size={24} color="#00796B" onPress={()=>{props.removePlayer(props.item)}}/>          
         </View>
     );
 }
