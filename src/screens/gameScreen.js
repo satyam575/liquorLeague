@@ -5,6 +5,13 @@ import * as ScreenOrientation from "expo-screen-orientation";
 
 import questions_array from '../data/questions'
 
+function getRandomQuestion(){
+  let randIndex = Math.floor(Math.random() * questions_array.length);
+  let questionChosen = questions_array[randIndex];
+  questions_array.splice(randIndex, 1); 
+  return questionChosen
+}
+
 const lockOrientation = async () => {
     await ScreenOrientation.lockAsync(
       ScreenOrientation.OrientationLock.LANDSCAPE_RIGHT
@@ -29,7 +36,7 @@ function GameScreen({ route }) {
       }, []);
 
     const onNextQuestion = () => {
-        changeQuestion(questions_array.pop())
+        changeQuestion(getRandomQuestion())
         changePlayer(getNextPlayer(allPlayers)["name"])
     }
 
