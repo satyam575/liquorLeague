@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, FlatList,Pressable ,ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, FlatList,Pressable ,ScrollView , Image} from 'react-native';
 import { Ionicons } from '@expo/vector-icons'
 
 import UserItem from '../components/userItem';
@@ -15,7 +15,10 @@ function HomeScreen({ navigation }) {
 
     return (
       <View style={styles.container}>
-        <View style = {{height:100,marginTop:30}}> 
+        <View style = {{marginTop:30,alignContent:"center",alignItems:"center",marginBottom:30}}> 
+            <Image
+            style={styles.tinyLogo}
+            source={require('../../assets/icon.png')}/>
             <Text style = {{fontSize : 30, color:"#00796B",fontWeight:"bold"}}>Liquor League</Text>
         </View>
         <ScrollView>
@@ -70,6 +73,10 @@ function HomeScreen({ navigation }) {
       alignContent:"center",
         alignItems:"center",
         paddingRight:15
+    },
+    tinyLogo: {
+      width: 150,
+      height: 150,
     },
     input: {
 
