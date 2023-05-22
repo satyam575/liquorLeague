@@ -96,7 +96,7 @@ function HomeScreen({ navigation }) {
             );
             return;
           }
-          navigation.navigate("GameScreen", {
+          navigation.navigate("Categories", {
             players: playersArray,
           });
         }}
