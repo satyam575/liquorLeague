@@ -8,10 +8,13 @@ import {
   Pressable,
   ScrollView,
   Image,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import UserItem from "../components/userItem";
+
+const createAlert = (title, msg) => Alert.alert(title, msg, [{ text: "OK" }]);
 
 function HomeScreen({ navigation }) {
   const [player, onChangePlayer] = useState("");
@@ -86,6 +89,13 @@ function HomeScreen({ navigation }) {
       <Pressable
         style={styles.GameOn}
         onPress={() => {
+          if (playersArray.length <= 0) {
+            createAlert(
+              "No Ghosts allowed!",
+              "Add atleast two players to play the game."
+            );
+            return;
+          }
           navigation.navigate("GameScreen", {
             players: playersArray,
           });
