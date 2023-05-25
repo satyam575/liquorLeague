@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Dimensions, BackHandler } from "react-native";
 import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
 import * as ScreenOrientation from "expo-screen-orientation";
 
-// import questions_array from "../data/questions";
+import BackgroundAnimation from "../components/backgroundAnimation";
 var questions_array = null;
 
 function getRandomQuestion() {
@@ -47,6 +47,7 @@ function GameScreen({ route }) {
 
   return (
     <View style={styles.container}>
+      <BackgroundAnimation />
       <Text style={styles.PlayerName}>{player}</Text>
       <View style={styles.questionContainer}>
         <Text style={styles.QuestionText}>{question}</Text>

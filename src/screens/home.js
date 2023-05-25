@@ -13,6 +13,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 import UserItem from "../components/userItem";
+import BackgroundAnimation from "../components/backgroundAnimation";
 
 const createAlert = (title, msg) => Alert.alert(title, msg, [{ text: "OK" }]);
 
@@ -37,6 +38,7 @@ function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <BackgroundAnimation />
       <View
         style={{
           marginTop: 30,

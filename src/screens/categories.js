@@ -7,6 +7,7 @@ import {
   Image,
   View,
 } from "react-native";
+import BackgroundAnimation from "../components/backgroundAnimation";
 
 const categoriesList = [
   {
@@ -40,6 +41,7 @@ const CategoriesScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <BackgroundAnimation />
       <Image
         style={styles.tinyLogo}
         source={require("../../assets/icon.png")}
