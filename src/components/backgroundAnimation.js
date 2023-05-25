@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { Animated, Easing, ImageBackground, StyleSheet } from "react-native";
 
 import backgroundImage from "../../assets/background_seamless.png";
@@ -12,7 +12,7 @@ import {
   ANIMATION_DURATION,
 } from "../utils/background_animation_utils";
 
-export default function BackgroundAnimation() {
+const BackgroundAnimation = () => {
   const initialValue = 0;
   const translateValue = useRef(new Animated.Value(initialValue)).current;
 
@@ -56,7 +56,7 @@ export default function BackgroundAnimation() {
       source={backgroundImage}
     />
   );
-}
+};
 
 const styles = StyleSheet.create({
   background: {
@@ -75,3 +75,5 @@ const styles = StyleSheet.create({
     ],
   },
 });
+
+export default memo(BackgroundAnimation);
