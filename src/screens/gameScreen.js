@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, Text, View, Dimensions, BackHandler } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  BackHandler,
+  StatusBar,
+} from "react-native";
 import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
 import * as ScreenOrientation from "expo-screen-orientation";
 
@@ -47,6 +54,7 @@ function GameScreen({ route }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#fff567" barStyle="light-content" />
       <BackgroundAnimation />
       <Text style={styles.PlayerName}>{player}</Text>
       <View style={styles.questionContainer}>
@@ -91,7 +99,7 @@ const styles = StyleSheet.create({
     fontWeight: "100",
     textAlignVertical: "center",
     color: "#00796B",
-    marginTop: 30,
+    marginTop: 10,
   },
   questionContainer: {
     flexDirection: "row",
@@ -99,7 +107,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingBottom: 40,
-    paddingHorizontal: 30,
+    paddingHorizontal: 10,
   },
 });
 

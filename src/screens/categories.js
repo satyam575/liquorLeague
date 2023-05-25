@@ -6,6 +6,7 @@ import {
   Pressable,
   Image,
   View,
+  StatusBar,
 } from "react-native";
 import BackgroundAnimation from "../components/backgroundAnimation";
 
@@ -41,6 +42,7 @@ const CategoriesScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="#ffff00" barStyle="light-content" />
       <BackgroundAnimation />
       <Image
         style={styles.tinyLogo}
@@ -68,8 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFEB3B",
     alignItems: "center",
     justifyContent: "center",
-    padding: 30,
-    paddingHorizontal: 15,
+    padding: 15,
   },
   list: {
     //   padding: 10,
@@ -81,6 +82,7 @@ const styles = StyleSheet.create({
   },
   tinyLogo: {
     marginVertical: 40,
+    marginTop: 5,
     width: 150,
     height: 150,
   },

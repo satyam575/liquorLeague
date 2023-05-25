@@ -9,6 +9,7 @@ import {
   ScrollView,
   Image,
   Alert,
+  StatusBar,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -38,10 +39,15 @@ function HomeScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar
+        // hidden={true}
+        backgroundColor="#fff567"
+        barStyle="light-content"
+      />
       <BackgroundAnimation />
       <View
         style={{
-          marginTop: 30,
+          marginTop: 5,
           alignContent: "center",
           alignItems: "center",
           marginBottom: 30,
@@ -121,10 +127,9 @@ const styles = StyleSheet.create({
     width: "90%",
     height: 60,
     maxHeight: 60,
-    margin: 12,
+    margin: 7,
     flex: 1,
     borderWidth: 2,
-    margin: 30,
     borderColor: "#00796B",
     borderRadius: 7,
     flexDirection: "row",
@@ -149,8 +154,7 @@ const styles = StyleSheet.create({
     fontFamily: "Supply_Center",
     height: 60,
     maxHeight: 60,
-    margin: 12,
-    marginTop: 0,
+    marginTop: 7,
     flex: 1,
     borderWidth: 2,
     fontSize: 23,
@@ -171,8 +175,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFEB3B",
     alignItems: "center",
     justifyContent: "center",
-    padding: 30,
-    paddingHorizontal: 15,
+    padding: 15,
   },
   list: {
     //   padding: 10,
