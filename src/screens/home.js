@@ -49,7 +49,13 @@ function HomeScreen({ navigation }) {
           style={styles.tinyLogo}
           source={require("../../assets/icon.png")}
         />
-        <Text style={{ fontSize: 30, color: "#00796B", fontWeight: "bold" }}>
+        <Text
+          style={{
+            fontSize: 25,
+            color: "#00796B",
+            fontFamily: "Supply_Center",
+          }}
+        >
           Liquor League
         </Text>
       </View>
@@ -129,8 +135,8 @@ const styles = StyleSheet.create({
     height: 150,
   },
   input: {
-    fontWeight: "bold",
-    fontSize: 23,
+    fontFamily: "Supply_Center",
+    fontSize: 18,
     flex: 1,
     padding: 10,
     color: "#00796B",
@@ -138,13 +144,13 @@ const styles = StyleSheet.create({
   GameOn: {
     width: "90%",
     minHeight: 60,
+    fontFamily: "Supply_Center",
     height: 60,
     maxHeight: 60,
     margin: 12,
     marginTop: 0,
     flex: 1,
     borderWidth: 2,
-    fontWeight: "bold",
     fontSize: 23,
     borderColor: "#00796B",
     borderRadius: 7,
@@ -154,8 +160,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   GameOnText: {
-    fontWeight: "bold",
     fontSize: 23,
+    fontFamily: "Supply_Center",
     color: "#00796B",
   },
   container: {

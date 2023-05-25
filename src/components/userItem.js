@@ -8,7 +8,8 @@ const UserItem = (props) => {
       <Text
         style={{
           height: 30,
-          fontSize: 23,
+          fontSize: 17,
+          fontFamily: "Supply_Center",
           color: "#00796B",
           textAlign: "center",
           textAlignVertical: "center",

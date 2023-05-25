@@ -10,11 +10,11 @@ import {
 
 const categoriesList = [
   {
-    name: "Bonding",
+    name: "Vanilla",
     location: require("../../assets/questions/bonding.json"),
   },
   {
-    name: "Dirty ",
+    name: "Naughty",
     location: require("../../assets/questions/explicit.json"),
   },
   {
@@ -108,15 +108,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   CategoryText: {
-    fontWeight: "bold",
-    fontSize: 23,
+    fontSize: 18,
     color: "#00796B",
+    fontFamily: "Supply_Center",
   },
   HeadingText: {
-    fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 20,
     color: "#00796B",
     textAlign: "center",
+    fontFamily: "Supply_Center",
   },
 });
 
