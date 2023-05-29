@@ -10,6 +10,8 @@ import {
   Image,
   Alert,
   StatusBar,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -38,7 +40,10 @@ function HomeScreen({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "height" : null}
+    >
       <StatusBar
         // hidden={true}
         backgroundColor="#fff567"
@@ -60,6 +65,7 @@ function HomeScreen({ navigation }) {
         <Text
           style={{
             fontSize: 25,
+            paddingVertical: 6,
             color: "#00796B",
             fontFamily: "Supply_Center",
           }}
@@ -117,7 +123,7 @@ function HomeScreen({ navigation }) {
       >
         <Text style={styles.GameOnText}>Game On</Text>
       </Pressable>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -176,6 +182,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 15,
+    paddingTop: 40,
   },
   list: {
     //   padding: 10,

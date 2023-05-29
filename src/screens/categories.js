@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 15,
+    paddingTop: 40,
   },
   list: {
     //   padding: 10,
@@ -110,6 +111,7 @@ const styles = StyleSheet.create({
     color: "#00796B",
     alignContent: "center",
     alignItems: "center",
+    justifyContent: "center",
   },
   CategoryText: {
     fontSize: 18,

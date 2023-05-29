@@ -54,7 +54,11 @@ function GameScreen({ route }) {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#fff567" barStyle="light-content" />
+      <StatusBar
+        backgroundColor="#fff567"
+        barStyle="light-content"
+        hidden={true}
+      />
       <BackgroundAnimation />
       <Text style={styles.PlayerName}>{player}</Text>
       <View style={styles.questionContainer}>
@@ -81,7 +85,6 @@ const styles = StyleSheet.create({
   },
   QuestionText: {
     width: "90%",
-    height: "100%",
     fontFamily: "Supply_Center",
     fontSize: 30,
     paddingHorizontal: 40,

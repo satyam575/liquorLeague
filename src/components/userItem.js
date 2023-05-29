@@ -7,13 +7,14 @@ const UserItem = (props) => {
     <View style={styles.container}>
       <Text
         style={{
-          height: 30,
+          // height: 30,
           fontSize: 17,
           fontFamily: "Supply_Center",
           color: "#00796B",
           textAlign: "center",
           textAlignVertical: "center",
           margin: 3,
+          // backgroundColor: "black",
         }}
       >
         {props.item.name}
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
     borderColor: "#00796B",
     alignItems: "center",
     alignContent: "center",
+    textAlignVertical: "center",
     justifyContent: "center",
     padding: 3,
     marginRight: 3,

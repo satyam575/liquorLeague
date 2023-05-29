@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, memo } from "react";
 import { Animated, Easing, ImageBackground, StyleSheet } from "react-native";
 
-import backgroundImage from "../../assets/background_seamless.png";
+import backgroundImage from "../../assets/background_seamless.jpg";
 
 import {
   INPUT_RANGE_START,
@@ -22,7 +22,7 @@ const BackgroundAnimation = () => {
       Animated.timing(translateValue, {
         toValue: ANIMATION_TO_VALUE,
         duration: ANIMATION_DURATION,
-        easing: Easing.linear,
+        // easing: Easing.linear,
         useNativeDriver: true,
       }).start(() => translate());
     };
